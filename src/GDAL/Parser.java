@@ -89,8 +89,13 @@ class Parser {
         if (match(TRUE)) return new Expr.Literal(true);
         if (match(NIL)) return new Expr.Literal(null);
 
-        if (match(NUMBER, STRING)) {
+        if (match(STRING)) {
             return new Expr.Literal(previous().literal);
+        }
+
+        if (match(NUMBER)) {
+            double number = Double.parseDouble((String) previous().literal);
+            return new Expr.Literal(number);
         }
 
         if (match(LEFT_PAREN)) {
