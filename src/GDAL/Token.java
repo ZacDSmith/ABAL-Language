@@ -1,4 +1,4 @@
-package cum;
+package GDAL;
 class Token{
     final TokenType type;
     final String lexeme;
