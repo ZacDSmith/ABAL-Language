@@ -1,1 +1,0 @@
-INDEX VERSION 1.134+C:\Users\Ratfi\OneDrive\Desktop\java language\Lox\src\GDAL\.metadata\.plugins\org.eclipse.jdt.core

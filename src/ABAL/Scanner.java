@@ -1,11 +1,11 @@
-package GDAL;
+package ABAL;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static GDAL.TokenType.*;
+import static ABAL.TokenType.*;
 
 class Scanner{
     private final String source;
