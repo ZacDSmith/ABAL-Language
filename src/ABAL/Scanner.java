@@ -59,6 +59,7 @@ class Scanner{
             case '\n':
                 line++;
                 break;
+
             case '"': string(); break;
 
 
@@ -120,16 +121,18 @@ class Scanner{
             if (peek() == '\n') line++;
             advance();
         }
+
         if (isAtEnd()) {
             Lox.error(line, "Unterminated string.");
             return;
         }
 
-        // The Closing ".
+        // The Closing "
         advance();
 
         // Trim the surrounding quotes.
-        String value = source.substring(start + 1, current - 1);
+
+        String value = source.substring(start+1,current-1);
         addToken(STRING, value);
     }
     private boolean match(char expected) {
@@ -169,6 +172,6 @@ class Scanner{
     }
     private void addToken(TokenType type, Object literal) {
         String text = source.substring(start, current);
-        tokens.add(new Token(type, text, text, line));
+        tokens.add(new Token(type, text, literal, line));
     }
 }

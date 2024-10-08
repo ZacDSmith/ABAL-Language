@@ -1,4 +1,5 @@
 package ABAL;
+
 class Token{
     final TokenType type;
     final String lexeme;
